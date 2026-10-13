@@ -16,6 +16,7 @@
   "dependencies": {
     "@astrojs/node": "^11.1.7",
     "@astrojs/svelte": "^9.0.1",
+    "@aws-sdk/client-dynamodb": "^3.1150.0",
     "astro": "^7.3.8",
     "svelte": "^5.57.2"
   }
