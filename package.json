@@ -11,7 +11,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "server": "node dist/server/entry.mjs"
+    "server": "node dist/server/entry.mjs",
+    "package": "astro build && rm -rf .deploy && mkdir .deploy && cp -r server.ts dist .deploy/",
+    "deploy": "npm run package && cdk deploy",
+    "destroy": "cdk destroy"
   },
   "dependencies": {
     "@astrojs/node": "^11.1.7",
@@ -19,5 +22,11 @@
     "@aws-sdk/client-dynamodb": "^3.1150.0",
     "astro": "^7.3.8",
     "svelte": "^5.57.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "aws-cdk": "^2.1145.0",
+    "aws-cdk-lib": "^2.273.0",
+    "constructs": "^10.8.1"
   }
 }

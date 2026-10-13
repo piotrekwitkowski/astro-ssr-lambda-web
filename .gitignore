@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Lambda Web Function deployment package
+.deploy/
+
+# CDK
+cdk.out/
